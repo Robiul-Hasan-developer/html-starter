@@ -1,0 +1,31 @@
+/* ========================== Button Css Start =============== */
+.btn {
+    border: 1px solid transparent;
+    color: hsl(var(--white));
+    line-height: 1;
+    padding: 18px 32px;
+    &:hover, &:focus, &:focus-visible {
+        box-shadow: none !important;
+    }
+    // ============= Different Color Button Start ==================
+    &-main {
+        background-color: var(--main-600);
+        border-color: var(--main-600);
+        &:hover, &:active {
+            background-color: var(--main-800) !important;
+            border-color: var(--main-800) !important;
+            color: hsl(var(--white)) !important;
+        }
+    }
+    &-outline-main {
+        background-color: transparent;
+        border-color: var(--main-600);
+        color: var(--main-600);
+        &:hover, &:active {
+            background-color: var(--main-600) !important;
+            border-color: var(--main-600) !important;
+            color: hsl(var(--white)) !important;
+        }
+    }
+}
+/* =========================== Button Css End =================== */

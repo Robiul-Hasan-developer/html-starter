@@ -1,0 +1,14 @@
+/* Active Scale Css start */
+.active-scale {
+    &-098 {
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+    &-102 {
+        &:active {
+            transform: scale(1.02);
+        }
+    }
+}
+/* Active Scale Css End */

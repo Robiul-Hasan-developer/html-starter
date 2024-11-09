@@ -5,21 +5,7 @@
   //      Start Document Ready function
   // ==========================================
   $(document).ready(function () {
-    
-  // ============== Mobile Menu Sidebar & Offcanvas Js Start ========
-  $('.toggle-mobileMenu').on('click', function () {
-    $('.mobile-menu').addClass('active');
-    $('.side-overlay').addClass('show');
-    $('body').addClass('scroll-hide-sm');
-  }); 
-
-  $('.close-button, .side-overlay').on('click', function () {
-    $('.mobile-menu').removeClass('active');
-    $('.side-overlay').removeClass('show');
-    $('body').removeClass('scroll-hide-sm');
-  }); 
-  // ============== Mobile Menu Sidebar & Offcanvas Js End ========
-  
+      
   // ============== Mobile Nav Menu Dropdown Js Start =======================
   function toggleSubMenu() {
     if ($(window).width() <= 991) {

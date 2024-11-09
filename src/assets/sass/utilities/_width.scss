@@ -5,6 +5,10 @@
   }
 }
 
+.min-w-max {
+  min-width: max-content;
+}
+
 .tw-w {
   &-300-px {
     width: 300px;

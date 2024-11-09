@@ -871,10 +871,6 @@ input:focus, input:focus-visible {
     }
 }
 
-.min-w-max {
-    min-width: max-content;
-}
-
 .tw-leading-none {
     line-height: 1;
 }
@@ -1240,8 +1236,32 @@ input:focus, input:focus-visible {
     color: var(--main-600) !important;
 }
 
+.group:hover .group-hover-bg-white {
+    background-color: hsl(var(--white)) !important;
+}
+
+.group:hover .group-hover-bg-main-600 {
+    background-color: var(--main-600) !important;
+}
+
 .group-hover-text-transition {
     transition: inherit;
+}
+
+.tw-invisible {
+    visibility: hidden;
+}
+
+.group-item:hover .group-hover-item-visible {
+    visibility: visible;
+}
+
+.group-item:hover .group-hover-item-opacity-1 {
+    opacity: 1 !important;
+}
+
+.group-item:hover .group-hover-item-mt-0 {
+    margin-top: 0;
 }
 
 /* ======================== Group Css End =============================== */
@@ -1998,6 +2018,14 @@ input:focus, input:focus-visible {
     margin-block-end: var(--size-17);
 }
 
+.tw-ms-auto {
+    margin-inline-start: auto;
+}
+
+.tw-me-auto {
+    margin-inline-end: auto;
+}
+
 .my-120 {
     margin-block-start: 60px;
     margin-block-end: 60px;
@@ -2106,6 +2134,7 @@ input:focus, input:focus-visible {
     transition: 0.2s linear;
     visibility: hidden;
     opacity: 0;
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVBAMAAABbObilAAAAMFBMVEVMaXH////////////////////////////////////////////////////////////6w4mEAAAAD3RSTlMAlAX+BKLcA5+b6hJ7foD4ZP1OAAAAkUlEQVR4XkWPoQ3CUBQAL4SktoKAbCUjgAKLJZ2ABYosngTJCHSD6joUI6BZgqSoB/+Shqde7sS9x3OGk81fdO+texMtRVTia+TsQtHEUJLdohJfgNNPJHyEJPZTsWLoxShqsWITazEwqePAn69Sw2TUxk1+euPis3EwaXy8RMHSZBIlRcKKnC5hRctjMf57/wJbBlAIs9k1BAAAAABJRU5ErkJggg==), progress;
 }
 
 .overlay.show-overlay {
@@ -2125,6 +2154,7 @@ input:focus, input:focus-visible {
     transition: 0.2s linear;
     visibility: hidden;
     opacity: 0;
+    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVBAMAAABbObilAAAAMFBMVEVMaXH////////////////////////////////////////////////////////////6w4mEAAAAD3RSTlMAlAX+BKLcA5+b6hJ7foD4ZP1OAAAAkUlEQVR4XkWPoQ3CUBQAL4SktoKAbCUjgAKLJZ2ABYosngTJCHSD6joUI6BZgqSoB/+Shqde7sS9x3OGk81fdO+texMtRVTia+TsQtHEUJLdohJfgNNPJHyEJPZTsWLoxShqsWITazEwqePAn69Sw2TUxk1+euPis3EwaXy8RMHSZBIlRcKKnC5hRctjMf57/wJbBlAIs9k1BAAAAABJRU5ErkJggg==), progress;
 }
 
 .side-overlay.show {
@@ -3023,7 +3053,55 @@ input:focus, input:focus-visible {
 }
 
 /* Border Radius Css End */
-/* Active Scale Css start */
+/* Rotate Css Start */
+.tw-hover-rotate-360:hover {
+    transform: rotate(260deg);
+}
+
+/* Rotate Css End */
+/* Hover Scale Css start */
+.hover-scale-09:hover {
+    transform: scale(0.9);
+}
+
+.hover-scale-094:hover {
+    transform: scale(0.94);
+}
+
+.hover-scale-098:hover {
+    transform: scale(0.98);
+}
+
+.hover-scale-102:hover {
+    transform: scale(1.02);
+}
+
+.hover-scale-104:hover {
+    transform: scale(1.04);
+}
+
+.hover-scale-106:hover {
+    transform: scale(1.06);
+}
+
+.hover-scale-108:hover {
+    transform: scale(1.08);
+}
+
+.hover-scale-2:hover {
+    transform: scale(1.2);
+}
+
+/* Hover Scale Css End */
+/* Active Scale Css End */
+.active-scale-09:active {
+    transform: scale(0.9);
+}
+
+.active-scale-094:active {
+    transform: scale(0.94);
+}
+
 .active-scale-098:active {
     transform: scale(0.98);
 }
@@ -3091,12 +3169,12 @@ input:focus, input:focus-visible {
 
 /* Box shadow End */
 /* transition Css Class start */
-.transition {
+.tw-transition {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
 }
 
-.transition-all {
+.tw-transition-all {
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms;
@@ -3160,6 +3238,19 @@ input:focus, input:focus-visible {
 
 .active--translate-y-1:active {
     transform: translateY(-4px);
+}
+
+/* Translate X */
+.hover--translate-x-05:hover {
+    transform: translateX(-2px);
+}
+
+.hover--translate-x-1:hover {
+    transform: translateX(-4px);
+}
+
+.hover--translate-x-2:hover {
+    transform: translateX(-8px);
 }
 
 /*================================== Translate Css End  ==================================*/
@@ -3274,6 +3365,10 @@ input:focus, input:focus-visible {
     width: 4.25rem;
 }
 
+.min-w-max {
+    min-width: max-content;
+}
+
 .tw-w-300-px {
     width: 300px;
 }
@@ -3352,11 +3447,69 @@ input:focus, input:focus-visible {
 
 /* ================================= Accordion Css End =========================== */
 /* ========================== Button Css Start =============== */
+.button__label {
+    position: relative;
+    text-align: center;
+    transition: color 0.05s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.button--stroke:hover {
+    color: #0e100f;
+}
+
+.button--stroke::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 0.125rem solid #fffce1;
+    border-radius: inherit;
+    pointer-events: none;
+}
+
+.button--stroke .button__flair {
+    transform: scale(0);
+    transform-origin: 0 0;
+}
+
+.button--stroke .button__label {
+    transition: color 0.15s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.button__flair {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.button__flair::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    aspect-ratio: 1/1;
+    background-color: #fffce1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
 .btn {
-    border: 1px solid transparent;
+    border: 0;
     color: hsl(var(--white));
     line-height: 1;
     padding: 18px 32px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    z-index: 1;
+    transition: 0.2s linear;
 }
 
 .btn:hover, .btn:focus, .btn:focus-visible {
@@ -3364,26 +3517,36 @@ input:focus, input:focus-visible {
 }
 
 .btn-main {
-    background-color: var(--main-600);
-    border-color: var(--main-600);
-}
-
-.btn-main:hover, .btn-main:active {
-    background-color: var(--main-800) !important;
-    border-color: var(--main-800) !important;
-    color: hsl(var(--white)) !important;
-}
-
-.btn-outline-main {
-    background-color: transparent;
-    border-color: var(--main-600);
-    color: var(--main-600);
-}
-
-.btn-outline-main:hover, .btn-outline-main:active {
     background-color: var(--main-600) !important;
-    border-color: var(--main-600) !important;
     color: hsl(var(--white)) !important;
+}
+
+.btn-main.button--stroke::after {
+    border-color: transparent;
+}
+
+.hover-style-one:hover, .hover-style-one:active {
+    background-color: var(--main-600);
+}
+
+.hover-style-one:hover.button--stroke::after, .hover-style-one:active.button--stroke::after {
+    border-color: transparent;
+}
+
+.hover-style-one .button__flair::before {
+    background-color: red;
+}
+
+.hover-style-two:hover, .hover-style-two:active {
+    color: var(--main-two-600) !important;
+}
+
+.hover-style-two:hover.button--stroke::after, .hover-style-two:active.button--stroke::after {
+    border-color: transparent;
+}
+
+.hover-style-two .button__flair::before {
+    background-color: hsl(var(--white));
 }
 
 /* =========================== Button Css End =================== */
@@ -3836,7 +3999,8 @@ input[type=number] {
     transform: translateY(15px);
     -webkit-transition: all 200ms linear;
     transition: all 200ms linear;
-    background-color: var(--gray-100);
+    background-color: #fff;
+    mix-blend-mode: difference;
 }
 
 @media screen and (max-width: 991px) {
@@ -3900,4 +4064,33 @@ input[type=number] {
 }
 
 /* ===================== Scroll to Top End ================================= */
+/* Custom Cursor Css Start */
+.cursor, .dot {
+    width: 32px;
+    height: 32px;
+    border: 1px solid hsl(var(--white));
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999999;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+    font-size: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    mix-blend-mode: difference;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: hsl(var(--white));
+    mix-blend-mode: difference;
+}
+
+/* Custom Cursor Css End */
 /*# sourceMappingURL=main.css.map */

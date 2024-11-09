@@ -41,6 +41,16 @@
   }
 }
 
+
+.tw {
+  &-ms-auto {
+    margin-inline-start: auto;
+  }
+  &-me-auto {
+    margin-inline-end: auto;
+  }
+}
+
 .my-120 {
   margin-block-start: 60px;
   margin-block-end: 60px;

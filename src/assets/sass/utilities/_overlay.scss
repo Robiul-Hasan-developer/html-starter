@@ -27,7 +27,7 @@
     inset-inline-start: 0;
     inset-block-start: 0;
     background-color: hsl(var(--black) / .6);
-    z-index: 99;
+    z-index: 999;
     transition: .2s linear;
     visibility: hidden;
     opacity: 0;

@@ -3216,7 +3216,7 @@ input:focus, input:focus-visible {
 }
 
 /* Translate Y */
-.tw-translate-y-50 {
+.tw--translate-y-50 {
     transform: var(--translate-y-50);
 }
 

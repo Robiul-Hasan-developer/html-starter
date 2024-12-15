@@ -32,7 +32,7 @@
     &__item {
         &.activePage {
             > a {
-                color: var(--main-600);
+                color: var(--main-600) !important;
                 &::before {
                     color: var(--main-600);
                 }
@@ -103,7 +103,7 @@
         &.activePage {
             .nav-submenu {
                 &__link {
-                    color: var(--main-600);
+                    color: var(--main-600) !important;
                 }
             }
         }

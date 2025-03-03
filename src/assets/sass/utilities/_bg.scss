@@ -23,4 +23,19 @@
     background-color: hsl(var(--white)) !important;
   }
 }
+
+.bg-white {
+  &-08 {
+    background-color: hsl(var(--white)/.08);
+  }
+  &-13 {
+    background-color: hsl(var(--white)/.13);
+  }
+  &-7 {
+    background-color: hsl(var(--white)/.7);
+  }
+  &-06 {
+    background-color: hsl(var(--white)/.06);
+  }
+}
 /* hover bg class end */

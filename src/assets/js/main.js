@@ -90,57 +90,156 @@
 // ========================== add active class to navbar menu current page Js End =====================
 
 
-// ================================= Position aware Button Animation Js Start =============================
-// (function() {
-//   const buttons = document.querySelectorAll(".btn-posnawr");
+  // ********************* Toast Notification Js start *********************
+  function toastMessage(messageType, messageTitle, messageText, messageIcon) {
+    let toastContainer = document.querySelector('#toast-container'); 
 
-//   buttons.forEach(button => {
-//     ["mouseenter", "mouseout"].forEach(evt => {
-//       button.addEventListener(evt, e => {
-//         let parentOffset = button.getBoundingClientRect(),
-//             relX = e.pageX - parentOffset.left,
-//             relY = e.pageY - parentOffset.top;
+    let toast = document.createElement('div');
+    toast.className = `toast-message ${messageType}`;
 
-//         const animationBg = button.getElementsByTagName(".animation-bg");
+    toast.innerHTML = `
+        <div class="toast-message__content">
+            <span class="toast-message__icon">
+                <i class="${messageIcon}"></i>
+            </span>
+            <div class="flex-grow-1">
+                <div class="d-flex align-items-start justify-content-between mb-1">
+                    <h6 class="toast-message__title">${messageTitle}</h6>
+                    <button type="button" class="toast-message__close">
+                        <i class="ph-bold ph-x"></i>
+                    </button>
+                </div>
+                <span class="toast-message__text">${messageText}</span>
+            </div>
+        </div>
+        <div class="progress__bar"></div>
+    `;
 
-//         animationBg[0].style.top = relY + "px";
-//         animationBg[0].style.left = relX + "px";
-//       });
-//     });
-//   });
-// })();
-// ================================= Position aware Button Animation Js End =============================
+    toastContainer.appendChild(toast);
+    
+    setTimeout(() => {
+        toast.classList.add('active');
+    }, 50);
 
+    let totalDuration = 3500;
+    let startTime = Date.now();
+    let remainingTime = totalDuration;
+    let toastTimeout = setTimeout(hideToast, remainingTime);
+
+    function hideToast() {
+        toast.classList.remove('active');
+        setTimeout(() => {
+            toast.remove();
+        }, 500);
+    }
+
+    // Remove Toast
+    let closeToast = toast.querySelector('.toast-message__close');
+    closeToast.addEventListener('click', function () {
+        toast.classList.remove('active');
+        setTimeout(() => {
+            toast.remove();
+        }, 500);
+    });
+    // Remove Toast
+
+
+    // Pause Timeout on Hover
+    toast.addEventListener('mouseenter', function () {
+        remainingTime -= Date.now() - startTime;
+        clearTimeout(toastTimeout);
+    });
+
+    // Resume Timeout on Mouse Leave
+    toast.addEventListener('mouseleave', function () {
+        startTime = Date.now();
+        toastTimeout = setTimeout(hideToast, remainingTime);
+    });
+}
+// ********************* Toast Notification Js End *********************
+
+
+  // ========================= Delete Item Js start ===================
+  let deleteButtons = document.querySelectorAll('.delete-button');
+
+  deleteButtons.forEach(deleteButton => {
+    deleteButton.addEventListener('click', function () {
+      this.closest('.delete-item').classList.add('d-none');
+      toastMessage("danger", "Deleted", "You deleted successfully!", 'ph-bold ph-trash');
+    });
+  });
+  // ========================= Delete Item Js End ===================
+
+  // ========================= Form Submit Js Start ===================
+  let formSubmit = document.querySelector('.form-submit');
+  let fields = document.querySelectorAll('input');
+  let textarea = document.querySelector('textarea');
+
+  if(formSubmit && fields) {
+    formSubmit.addEventListener('submit', function (e) {
+      e.preventDefault();
+      fields.forEach(field => {
+        field.value = "";
+        textarea.value = "";
+      });
+      toastMessage("success", "Success", "Form submitted successfully!", 'ph-fill ph-check-circle');
+    });
+  }
+  // ========================= Form Submit Js End ===================
+
+
+  // ================== Password Show Hide Js Start ==========
+  $(".toggle-password").on('click', function() {
+    $(this).toggleClass("active");
+    var input = $($(this).attr("id"));
+    if (input.attr("type") == "password") {
+      input.attr("type", "text");
+      $(this).removeClass('ph-bold ph-eye-closed');
+      $(this).addClass('ph-bold ph-eye');
+    } else {
+      input.attr("type", "password");
+        $(this).addClass('ph-bold ph-eye-closed');
+    }
+  });
+  // ========================= Password Show Hide Js End ===========================
 
   
-  // ========================= Testimonial Four Slider Js Start ==============
-  // $('.testimonial-four-slider').slick({
-  //   slidesToShow: 2,
-  //   slidesToScroll: 1,
+  // // ================================= Brand slider Start =========================
+  // var brandSlider = new Swiper('.brand-slider', {
+  //   autoplay: {
+  //     delay: 2000,
+  //     disableOnInteraction: false
+  //   },
   //   autoplay: true,
-  //   autoplaySpeed: 2000,
   //   speed: 1500,
-  //   dots: true,
-  //   pauseOnHover: true,
-  //   arrows: false,
-  //   draggable: true,
-  //   speed: 900,
-  //   infinite: true,
-  //   prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-arrow-left"></i></button>',
-  //   nextArrow: '<button type="button" class="slick-next"><i class="fas fa-arrow-right"></i></button>',
-  //   responsive: [
-  //     {
-  //       breakpoint: 767,
-  //       settings: {
-  //         slidesToShow: 1,
-  //         arrows: false,
-  //       }
-  //     }
-  //   ]
+  //   grabCursor: true,
+  //   loop: true,
+  //   slidesPerView: 7,
+  //   breakpoints: {
+  //       300: {
+  //           slidesPerView: 2,
+  //       },
+  //       575: {
+  //           slidesPerView: 3,
+  //       },
+  //       768: {
+  //           slidesPerView: 4,
+  //       },
+  //       992: {
+  //           slidesPerView: 5,
+  //       },
+  //       1200: {
+  //           slidesPerView: 6,
+  //       },
+  //       1400: {
+  //           slidesPerView: 7,
+  //       },
+  //   }
   // });
-  // ========================= Testimonial Four Slider Js End ===================
+  // // ================================= Brand slider End =========================
   
-   // ========================= Counter Up Js End ===================
+  
+  // ========================= Counter Up Js End ===================
   //  const counterUp = window.counterUp.default;
 
   //  const callback = (entries) => {
@@ -172,20 +271,6 @@
     // });
   // ========================== Add Attribute For Bg Image Js End =====================
 
-  // ================== Password Show Hide Js Start ==========
-  $(".toggle-password").on('click', function() {
-    $(this).toggleClass("active");
-    var input = $($(this).attr("id"));
-    if (input.attr("type") == "password") {
-      input.attr("type", "text");
-      $(this).removeClass('ph-bold ph-eye-closed');
-      $(this).addClass('ph-bold ph-eye');
-    } else {
-      input.attr("type", "password");
-        $(this).addClass('ph-bold ph-eye-closed');
-    }
-  });
-  // ========================= Password Show Hide Js End ===========================
 
   });
   // ==========================================

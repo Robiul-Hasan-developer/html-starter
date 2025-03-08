@@ -4,6 +4,7 @@
 
 var tl = gsap.timeline(); 
 gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 
 // **************************** Nav Menu js Start ****************************
@@ -19,6 +20,16 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 // });
 // **************************** Nav Menu js End ****************************
 
+
+// =================================== Smooth Scroller Js Start =====================================
+const smoother = ScrollSmoother.create({
+  content: "#scrollSmoother-container",
+  smooth: 1,
+  effects: true,
+  smoothTouch: 0.1,
+  ease: 'power4.out',
+});
+// =================================== Smooth Scroller End Start =====================================
 
 // =================================== Custom Cursor Js Start =====================================
 var body = document.body;
@@ -179,6 +190,39 @@ if ($(".splitTextStyleOne").length > 0) {
     });
   });
 }
+
+// if ($('.splitTextStyleOne').length > 0) {
+//   let splitTextLines = gsap.utils.toArray(".splitTextStyleOne");
+
+//   splitTextLines.forEach(splitTextLine => { 
+//     const tl = gsap.timeline({
+//       scrollTrigger: {
+//         trigger: splitTextLine,
+//         start: 'top 99%',
+//         duration: .6,
+//         end: 'bottom 90%',
+//         scrub: false,
+//         markers: false,
+//         toggleActions: 'restart none none none'
+//       }
+//     });
+
+//     const itemSplitted = new SplitText(splitTextLine, { type: "lines" });
+
+//     gsap.set(splitTextLine, { perspective: 500 });
+//     itemSplitted.split({ type: "lines" })
+
+//     tl.from(itemSplitted.lines, { 
+//       duration: .6, 
+//       delay: 0.3, 
+//       opacity: 0, 
+//       rotationX: -80, 
+//       force3D: true, 
+//       transformOrigin: "top center -50",
+//       stagger: 0.1 
+//     });
+//   });
+// }
 // =================================== Custom Split text Js End =====================================
 
 

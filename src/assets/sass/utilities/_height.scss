@@ -6,11 +6,11 @@
 }
 
 .tw-h {
-  &-screen {
-    height: 100vh;
-  }
   &-px {
     height: 1px;
+  }
+  &-screen {
+    height: 100vh;
   }
   &-75-px {
     height: 75px;

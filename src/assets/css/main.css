@@ -1702,12 +1702,12 @@ input:focus, input:focus-visible {
     height: 4.25rem;
 }
 
-.tw-h-screen {
-    height: 100vh;
-}
-
 .tw-h-px {
     height: 1px;
+}
+
+.tw-h-screen {
+    height: 100vh;
 }
 
 .tw-h-75-px {
@@ -4089,6 +4089,10 @@ input:focus, input:focus-visible {
 
 .min-w-max {
     min-width: max-content;
+}
+
+.tw-w-px {
+    width: 1px;
 }
 
 .tw-w-300-px {

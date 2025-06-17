@@ -1,5 +1,6 @@
 /* ========================== Settings panel css start =========================== */
 .settings-button {
+  pointer-events: all;
   .close-icon {
     display: none;
   }
@@ -15,11 +16,13 @@
 
 .settings-panel {
   inset-inline-end: -280px;
+  pointer-events: none;
   transition: 0.3s;
   &.active {
     inset-inline-end: 0px !important;
   }
   &__content {
+    pointer-events: all;
     width: 280px;
     max-height: 100vh;
     overflow-y: auto;

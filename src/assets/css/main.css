@@ -4854,6 +4854,10 @@ input:focus, input:focus-visible {
 }
 /* ================================= preload Css End ===========================  */
 /* ========================== Settings panel css start =========================== */
+.settings-button {
+    pointer-events: all;
+}
+
 .settings-button .close-icon {
     display: none;
 }
@@ -4868,6 +4872,7 @@ input:focus, input:focus-visible {
 
 .settings-panel {
     inset-inline-end: -280px;
+    pointer-events: none;
     transition: 0.3s;
 }
 
@@ -4876,6 +4881,7 @@ input:focus, input:focus-visible {
 }
 
 .settings-panel__content {
+    pointer-events: all;
     width: 280px;
     max-height: 100vh;
     overflow-y: auto;

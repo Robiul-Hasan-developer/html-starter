@@ -1,55 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="EduAll HTML Template">
-    <meta name="keywords" content="EduAll HTML Template">
-    <meta name="robots" content="INDEX,FOLLOW">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="EduAll HTML Template" />
+    <meta name="keywords" content="EduAll HTML Template" />
+    <meta name="robots" content="INDEX,FOLLOW" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Title -->
-    <title> EduAll HTML Template</title>
+    <title>EduAll HTML Template</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="assets/images/logo/favicon.png">
+    <link rel="shortcut icon" href="assets/images/logo/favicon.png" />
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <!-- Main css -->
-    <link rel="stylesheet" href="assets/css/main.css">
-</head> 
-<body>
-    
-<!--==================== Preloader Start ====================-->
-  <div class="preloader">
-    <div class="loader"></div>
+    <link rel="stylesheet" href="assets/css/main.css" />
+  </head>
+  <body>
+    <!--==================== Preloader Start ====================-->
+    <div class="preloader">
+      <div class="loader"></div>
+    </div>
+    <!--==================== Preloader End ====================-->
+
+    <!-- ========================== Settings Panel start ==================================== -->
+<div
+  class="settings-panel position-fixed top-50 translate-middle-y tw-z-999 d-flex align-items-center"
+>
+  <button
+    type="button"
+    class="settings-button tw-w-12 tw-h-12 bg-main-600 text-white hover-bg-main-800 tw-duration-100 d-flex justify-content-center align-items-center"
+  >
+    <i
+      class="ph-fill ph-gear-six setting-icon tw-text-2xl tw-leading-none animation-rotate tw-w-6 tw-h-6"
+    ></i>
+    <i
+      class="ph-bold ph-x close-icon tw-text-2xl tw-leading-none tw-w-6 tw-h-6"
+    ></i>
+  </button>
+
+  <div
+    class="settings-panel__content bg-white tw-px-6 tw-py-13 shadow-lg d-flex flex-column tw-gap-10 scroll-sm overflow-y-auto"
+  >
+    <div class="d-flex flex-column tw-gap-10">
+      <div class="">
+        <h6 class="settings-panel__title text-center tw-mb-6 text-uppercase">
+          Cursor
+        </h6>
+        <div class="settings-panel__buttons cursor__buttons d-flex tw-gap-4">
+          <button
+            type="button"
+            class="settings-panel__button cursor-animate bg-main-two-600 hover-bg-main-600 tw-duration-300 text-white tw-text-base tw-py-305 tw-px-3 fw-medium active-scale-094 flex-grow-1 active"
+          >
+            Animate
+          </button>
+          <button
+            type="button"
+            class="settings-panel__button cursor-default bg-main-two-600 hover-bg-main-600 tw-duration-300 text-white tw-text-base tw-py-305 tw-px-3 fw-medium active-scale-094 flex-grow-1"
+          >
+            Default
+          </button>
+        </div>
+      </div>
+      <div class="">
+        <h6 class="settings-panel__title text-center tw-mb-6 text-uppercase">
+          Direction
+        </h6>
+        <div class="settings-panel__buttons d-flex tw-gap-4">
+          <button
+            type="button"
+            class="settings-panel__button direction-ltr bg-main-two-600 hover-bg-main-600 tw-duration-300 text-white tw-text-base tw-py-305 tw-px-3 fw-medium active-scale-094 flex-grow-1 active"
+          >
+            LTR
+          </button>
+          <button
+            type="button"
+            class="settings-panel__button direction-rtl bg-main-two-600 hover-bg-main-600 tw-duration-300 text-white tw-text-base tw-py-305 tw-px-3 fw-medium active-scale-094 flex-grow-1"
+          >
+            RTL
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
-<!--==================== Preloader End ====================-->
-
-<!--==================== Overlay Start ====================-->
-<div class="overlay"></div>
-<!--==================== Overlay End ====================-->
-
-<!--==================== Sidebar Overlay End ====================-->
-<div class="side-overlay"></div>
-<!--==================== Sidebar Overlay End ====================-->
-
-<!-- Custom Toast Message start -->
-<div id="toast-container"></div>
-<!-- Custom Toast Message End -->
-
-<!-- ==================== Scroll to Top End Here ==================== -->
-<div class="progress-wrap cursor-big">
-  <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
-      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
-  </svg>
 </div>
-<!-- ==================== Scroll to Top End Here ==================== -->
+<!-- ========================== Settings Panel end ==================================== -->
 
-<!-- Custom Cursor Start -->
-  <div class="cursor"></div>
-  <span class="dot"></span>
-<!-- Custom Cursor End -->
 
-<!-- ==================== Mobile Menu Start Here ==================== -->
+    <!--==================== Overlay Start ====================-->
+    <div class="overlay"></div>
+    <!--==================== Overlay End ====================-->
+
+    <!--==================== Sidebar Overlay End ====================-->
+    <div class="side-overlay"></div>
+    <!--==================== Sidebar Overlay End ====================-->
+
+    <!-- Custom Toast Message start -->
+    <div id="toast-container"></div>
+    <!-- Custom Toast Message End -->
+
+    <!-- ==================== Scroll to Top End Here ==================== -->
+    <div class="progress-wrap cursor-big">
+      <svg
+        class="progress-circle svg-content"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+    </div>
+    <!-- ==================== Scroll to Top End Here ==================== -->
+
+    <!-- Custom Cursor Start -->
+    <div class="cursor"></div>
+    <span class="dot"></span>
+    <!-- Custom Cursor End -->
+
+    <!-- ==================== Mobile Menu Start Here ==================== -->
 <div class="mobile-menu d-lg-none d-block scroll-sm position-fixed bg-white tw-w-300-px tw-h-screen overflow-y-auto tw-p-6 tw-z-999 tw--translate-x-full tw-pb-68 ">
 
     <button type="button" class="close-button position-absolute tw-end-0 top-0 tw-me-2 tw-mt-2 tw-w-605 tw-h-605 rounded-circle d-flex justify-content-center align-items-center text-neutral-900 bg-neutral-200 hover-bg-neutral-900 hover-text-white"> 
@@ -123,6 +191,8 @@
     </div>
 </div>
 <!-- ==================== Mobile Menu End Here ==================== -->
+  </body>
+</html>
 
 
 <div id="scrollSmoother-container">

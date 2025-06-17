@@ -53,8 +53,11 @@
         .group-hover-item-d-none {
             display: none !important;
         }
-        .group-hover-item-text-invert {
+        .group-hover-item-text-invert-white {
             filter: brightness(0) invert(1);
+        }
+        .group-hover-item-text-invert-black {
+            filter: brightness(0) invert(0);
         }
     }
 }

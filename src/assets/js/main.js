@@ -92,33 +92,33 @@
 
   // ********************* Toast Notification Js start *********************
   function toastMessage(messageType, messageTitle, messageText, messageIcon) {
-    let toastContainer = document.querySelector('#toast-container'); 
+    let $toastContainer = $("#toast-container");
 
-    let toast = document.createElement('div');
-    toast.className = `toast-message ${messageType}`;
-
-    toast.innerHTML = `
-        <div class="toast-message__content">
-            <span class="toast-message__icon">
-                <i class="${messageIcon}"></i>
-            </span>
-            <div class="flex-grow-1">
-                <div class="d-flex align-items-start justify-content-between mb-1">
-                    <h6 class="toast-message__title">${messageTitle}</h6>
-                    <button type="button" class="toast-message__close">
-                        <i class="ph-bold ph-x"></i>
-                    </button>
-                </div>
-                <span class="toast-message__text">${messageText}</span>
-            </div>
+    let $toast = $("<div>", {
+      class: `toast-message ${messageType}`,
+      html: `
+      <div class="toast-message__content">
+        <span class="toast-message__icon">
+          <i class="${messageIcon}"></i>
+        </span>
+        <div class="flex-grow-1">
+          <div class="d-flex align-items-start justify-content-between mb-1">
+            <h6 class="toast-message__title">${messageTitle}</h6>
+            <button type="button" class="toast-message__close">
+              <i class="ph-bold ph-x"></i>
+            </button>
+          </div>
+          <span class="toast-message__text">${messageText}</span>
         </div>
-        <div class="progress__bar"></div>
-    `;
+      </div>
+      <div class="progress__bar"></div>
+    `,
+    });
 
-    toastContainer.appendChild(toast);
-    
+    $toastContainer.append($toast);
+
     setTimeout(() => {
-        toast.classList.add('active');
+      $toast.addClass("active");
     }, 50);
 
     let totalDuration = 3500;
@@ -127,66 +127,62 @@
     let toastTimeout = setTimeout(hideToast, remainingTime);
 
     function hideToast() {
-        toast.classList.remove('active');
-        setTimeout(() => {
-            toast.remove();
-        }, 500);
+      $toast.removeClass("active");
+      setTimeout(() => {
+        $toast.remove();
+      }, 500);
     }
 
-    // Remove Toast
-    let closeToast = toast.querySelector('.toast-message__close');
-    closeToast.addEventListener('click', function () {
-        toast.classList.remove('active');
-        setTimeout(() => {
-            toast.remove();
-        }, 500);
+    // Remove Toast on Close Button Click
+    $toast.find(".toast-message__close").on("click", function () {
+      $toast.removeClass("active");
+      setTimeout(() => {
+        $toast.remove();
+      }, 500);
     });
-    // Remove Toast
-
 
     // Pause Timeout on Hover
-    toast.addEventListener('mouseenter', function () {
-        remainingTime -= Date.now() - startTime;
-        clearTimeout(toastTimeout);
+    $toast.on("mouseenter", function () {
+      remainingTime -= Date.now() - startTime;
+      clearTimeout(toastTimeout);
     });
 
     // Resume Timeout on Mouse Leave
-    toast.addEventListener('mouseleave', function () {
-        startTime = Date.now();
-        toastTimeout = setTimeout(hideToast, remainingTime);
+    $toast.on("mouseleave", function () {
+      startTime = Date.now();
+      toastTimeout = setTimeout(hideToast, remainingTime);
     });
-}
-// ********************* Toast Notification Js End *********************
-
+  }
+  // ********************* Toast Notification Js End *********************
 
   // ========================= Delete Item Js start ===================
-  let deleteButtons = document.querySelectorAll('.delete-button');
+  $(document).on("click", ".delete-button", function () {
+        $(this).closest(".delete-item").addClass("d-none");
 
-  deleteButtons.forEach(deleteButton => {
-    deleteButton.addEventListener('click', function () {
-      this.closest('.delete-item').classList.add('d-none');
-      toastMessage("danger", "Deleted", "You deleted successfully!", 'ph-bold ph-trash');
-    });
+        toastMessage(
+          "danger",
+          "Deleted",
+          "You deleted successfully!",
+          "ph-bold ph-trash"
+        );
   });
   // ========================= Delete Item Js End ===================
 
   // ========================= Form Submit Js Start ===================
-  let formSubmit = document.querySelector('.form-submit');
-  let fields = document.querySelectorAll('input');
-  let textarea = document.querySelector('textarea');
-
-  if(formSubmit && fields) {
-    formSubmit.addEventListener('submit', function (e) {
+   $(document).on("submit", ".form-submit", function (e) {
       e.preventDefault();
-      fields.forEach(field => {
-        field.value = "";
-      });
-      if(textarea) {
-        textarea.value = "";
-      }
-      toastMessage("success", "Success", "Form submitted successfully!", 'ph-fill ph-check-circle');
+
+      $("input").val("");
+
+      $("textarea").val("");
+
+      toastMessage(
+        "success",
+        "Success",
+        "Form submitted successfully!",
+        "ph-fill ph-check-circle"
+      );
     });
-  }
   // ========================= Form Submit Js End ===================
 
 

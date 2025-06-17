@@ -5183,4 +5183,114 @@ input:focus, input:focus-visible {
 }
 
 /* Custom Cursor Css End */
+/* ================================== rtl css start ================================== */
+.text-start {
+    text-align: start !important;
+}
+
+.form-check {
+    padding-left: 0;
+}
+
+.form-check {
+    padding-inline-start: 1.5em;
+}
+
+.form-check .form-check-input {
+    margin-left: 0;
+}
+
+[dir=rtl] .tw-translate-x-50 {
+    transform: translateX(50%);
+}
+
+[dir=rtl] .select-domain {
+    margin-inline-end: 0;
+}
+
+[dir=rtl] .pricing-plan .form-check {
+    padding-left: 0 !important;
+}
+
+[dir=rtl] .common-check-two .form-check-input::before {
+    transform: translate(50%, -50%);
+}
+
+[dir=rtl] .distraction-icon.seven {
+    transform: translate(50%, -50%);
+}
+
+[dir=rtl] .translate-middle-x {
+    transform: translateX(50%) !important;
+}
+
+[dir=rtl] .translate-x-100-16 {
+    transform: translateX(calc(100% - 105px));
+}
+
+[dir=rtl] .toast-message {
+    transform: translateX(-110%);
+}
+
+[dir=rtl] .toast-message.active {
+    transform: translateX(0) !important;
+}
+
+[dir=rtl] .arrow-long {
+    transform: scaleX(-1);
+}
+
+[dir=rtl] .common-check .form-check-input::before {
+    transform: translate(50%, -50%);
+}
+
+[dir=rtl] .form-check .form-check-input {
+    margin-right: -1.5em;
+}
+
+[dir=rtl] .top-features-slider {
+    direction: rtl;
+}
+
+[dir=rtl] .left-right-gradient::before {
+    background: linear-gradient(-90deg, #fff, transparent);
+}
+
+[dir=rtl] .left-right-gradient::after {
+    background: linear-gradient(-90deg, transparent, #ffffff);
+}
+
+[dir=rtl] .tw--translate-x-full {
+    transform: translateX(100%);
+}
+
+[dir=rtl] .ph-bold.ph-caret-right:before {
+    content: "\e138";
+}
+
+[dir=rtl] .ph-bold.ph-arrow-up-right:before {
+    content: "\e090";
+}
+
+[dir=rtl] .ph.ph-caret-right:before {
+    content: "\e138";
+}
+
+[dir=rtl] .ph.ph-caret-left:before {
+    content: "\e13a";
+}
+
+[dir=rtl] .ph.ph-arrow-right:before {
+    content: "\e058";
+}
+
+[dir=rtl] .ph-bold.ph-caret-left:before {
+    content: "\e13a";
+}
+
+[dir=rtl] .ph-bold.ph-caret-left:before {
+    content: "\e13a";
+}
+
+/* ================================== rtl css End ================================== */
 /*# sourceMappingURL=main.css.map */

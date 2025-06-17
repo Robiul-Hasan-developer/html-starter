@@ -4803,7 +4803,8 @@ input:focus, input:focus-visible {
 
 /* ===================== Scroll to Top End ================================= */
 /* Custom Cursor Css Start */
-.cursor, .dot {
+.cursor,
+.dot {
     width: 32px;
     height: 32px;
     border: 1px solid hsl(var(--white));
@@ -4824,8 +4825,8 @@ input:focus, input:focus-visible {
 }
 
 .dot {
-    width: 10px;
-    height: 10px;
+    width: 4px;
+    height: 4px;
     background-color: hsl(var(--white));
     mix-blend-mode: difference;
 }

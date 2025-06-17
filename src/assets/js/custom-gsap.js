@@ -2,13 +2,12 @@
                           Custom GSAP js start 
 ****************************************************************************  */
 
-var tl = gsap.timeline(); 
+var tl = gsap.timeline();
 gsap.registerPlugin(ScrollTrigger, SplitText);
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-
 // **************************** Nav Menu js Start ****************************
-// let mm = gsap.matchMedia(); 
+// let mm = gsap.matchMedia();
 
 // mm.add("(min-width: 992px)", () => {
 //   gsap.from('.nav-menu__item', {
@@ -20,146 +19,142 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 // });
 // **************************** Nav Menu js End ****************************
 
-
 // =================================== Smooth Scroller Js Start =====================================
 const smoother = ScrollSmoother.create({
   content: "#scrollSmoother-container",
   smooth: 1,
   effects: true,
   smoothTouch: 0.1,
-  ease: 'power4.out',
+  ease: "power4.out",
 });
 // =================================== Smooth Scroller End Start =====================================
 
 // =================================== Custom Cursor Js Start =====================================
 var body = document.body;
-var cursor = document.querySelector('.cursor');
-var dot = document.querySelector('.dot');
-var cursorSmalls = document.querySelectorAll('.cursor-small');
-var cursorBigs = document.querySelectorAll('.cursor-big');
+var cursor = document.querySelector(".cursor");
+var dot = document.querySelector(".dot");
+var cursorSmalls = document.querySelectorAll(".cursor-small");
+var cursorBigs = document.querySelectorAll(".cursor-big");
 
-body.addEventListener('mousemove', function (event) {
-    gsap.to(cursor, {
-        x: event.x,
-        y: event.y,
-        duration: 2, 
-        delay: 0.1,
-        visibility: 'visible',
-        ease: "expo.out",
-    });
+body.addEventListener("mousemove", function (event) {
+  gsap.to(cursor, {
+    x: event.x,
+    y: event.y,
+    duration: 2,
+    delay: 0.1,
+    visibility: "visible",
+    ease: "expo.out",
+  });
 });
 
-body.addEventListener('mousemove', function (event) {
-    gsap.to(dot, {
-        x: event.x,
-        y: event.y,
-        duration: 1.5,
-        visibility: 'visible',
-        ease: "expo.out",
-    });
+body.addEventListener("mousemove", function (event) {
+  gsap.to(dot, {
+    x: event.x,
+    y: event.y,
+    duration: 1.5,
+    visibility: "visible",
+    ease: "expo.out",
+  });
 });
 
 // Small Cursor
-cursorSmalls.forEach(cursorSmall => {
-  cursorSmall.addEventListener('mouseenter', function () {
-      gsap.to(dot, {
-          scale: 8,
-          backgroundColor: '#fff',
-      });
-      gsap.to(cursor, {
-          visibility: 'hidden',
-          opacity: 0
-      });
+cursorSmalls.forEach((cursorSmall) => {
+  cursorSmall.addEventListener("mouseenter", function () {
+    gsap.to(dot, {
+      scale: 8,
+      backgroundColor: "#fff",
+    });
+    gsap.to(cursor, {
+      visibility: "hidden",
+      opacity: 0,
+    });
   });
-  
-  cursorSmall.addEventListener('mouseleave', function () {
-      gsap.to(dot, {
-          scale: 1,
-          backgroundColor: '#fff',
-      });
-      gsap.to(cursor, {
-        visibility: 'visible',
-        opacity: 1
-      });
+
+  cursorSmall.addEventListener("mouseleave", function () {
+    gsap.to(dot, {
+      scale: 1,
+      backgroundColor: "#fff",
+    });
+    gsap.to(cursor, {
+      visibility: "visible",
+      opacity: 1,
+    });
   });
 });
 
 // Big Cursor
-cursorBigs.forEach(cursorBig => {
-  cursorBig.addEventListener('mouseenter', function () {
-      gsap.to(dot, {
-          scale: 16,
-          backgroundColor: '#fff',
-      });
-      gsap.to(cursor, {
-          visibility: 'hidden',
-          opacity: 0
-      });
+cursorBigs.forEach((cursorBig) => {
+  cursorBig.addEventListener("mouseenter", function () {
+    gsap.to(dot, {
+      scale: 30,
+      backgroundColor: "#fff",
+    });
+    gsap.to(cursor, {
+      visibility: "hidden",
+      opacity: 0,
+    });
   });
-  
-  cursorBig.addEventListener('mouseleave', function () {
-      gsap.to(dot, {
-          scale: 1,
-          backgroundColor: '#fff',
-      });
-      gsap.to(cursor, {
-        visibility: 'visible',
-        opacity: 1
-      });
+
+  cursorBig.addEventListener("mouseleave", function () {
+    gsap.to(dot, {
+      scale: 1,
+      backgroundColor: "#fff",
+    });
+    gsap.to(cursor, {
+      visibility: "visible",
+      opacity: 1,
+    });
   });
 });
 // =================================== Custom Cursor Js End =====================================
 
-
 // **************************** Mobile Menu js Start ****************************
-var mmm = gsap.matchMedia(); 
-var mtl = gsap.timeline({paused: true}); 
+var mmm = gsap.matchMedia();
+var mtl = gsap.timeline({ paused: true });
 
-const toggleMobileMenu = document.querySelector('.toggle-mobileMenu');
-const closeButton = document.querySelector('.close-button');
-const mobileSideOverlay = document.querySelector('.side-overlay');
+const toggleMobileMenu = document.querySelector(".toggle-mobileMenu");
+const closeButton = document.querySelector(".close-button");
+const mobileSideOverlay = document.querySelector(".side-overlay");
 
 mmm.add("(max-width: 991px)", () => {
-  
-  mtl.to('.side-overlay', {
+  mtl.to(".side-overlay", {
     opacity: 1,
-    visibility: 'visible',
-    duration: .15, 
-  });
-  
-  mtl.to('.mobile-menu', {
-    x: 0,
-    duration: .15,
-  });
-  
-  mtl.from('.nav-menu__item', {
-    opacity: 0,
-    duration: .2,
-    y: -60,
-    stagger: .08,
+    visibility: "visible",
+    duration: 0.15,
   });
 
-  mtl.from('.close-button', {
+  mtl.to(".mobile-menu", {
+    x: 0,
+    duration: 0.15,
+  });
+
+  mtl.from(".nav-menu__item", {
+    opacity: 0,
+    duration: 0.2,
+    y: -60,
+    stagger: 0.08,
+  });
+
+  mtl.from(".close-button", {
     opacity: 0,
     scale: 0,
-    duration: .15,
+    duration: 0.15,
   });
 
-  toggleMobileMenu.addEventListener('click', function () {
+  toggleMobileMenu.addEventListener("click", function () {
     mtl.play();
-    document.body.style.overflow = 'hidden'
+    document.body.style.overflow = "hidden";
   });
 
-  closeButton.addEventListener('click', function () {
+  closeButton.addEventListener("click", function () {
     mtl.reverse();
-    document.body.style.overflow = ''
+    document.body.style.overflow = "";
   });
 
-  mobileSideOverlay.addEventListener('click', function () {
+  mobileSideOverlay.addEventListener("click", function () {
     mtl.reverse();
-    document.body.style.overflow = ''
+    document.body.style.overflow = "";
   });
-
 });
 // **************************** Mobile Menu js End ****************************
 
@@ -187,7 +182,7 @@ if ($(".splitTextStyleOne").length > 0) {
       duration: 0.3,
       opacity: 0,
       stagger: 0.03,
-      ease: "back.out(1.7)"
+      ease: "back.out(1.7)",
     });
   });
 }
@@ -195,7 +190,7 @@ if ($(".splitTextStyleOne").length > 0) {
 // if ($('.splitTextStyleOne').length > 0) {
 //   let splitTextLines = gsap.utils.toArray(".splitTextStyleOne");
 
-//   splitTextLines.forEach(splitTextLine => { 
+//   splitTextLines.forEach(splitTextLine => {
 //     const tl = gsap.timeline({
 //       scrollTrigger: {
 //         trigger: splitTextLine,
@@ -213,20 +208,18 @@ if ($(".splitTextStyleOne").length > 0) {
 //     gsap.set(splitTextLine, { perspective: 500 });
 //     itemSplitted.split({ type: "lines" })
 
-//     tl.from(itemSplitted.lines, { 
-//       duration: .6, 
-//       delay: 0.3, 
-//       opacity: 0, 
-//       rotationX: -80, 
-//       force3D: true, 
+//     tl.from(itemSplitted.lines, {
+//       duration: .6,
+//       delay: 0.3,
+//       opacity: 0,
+//       rotationX: -80,
+//       force3D: true,
 //       transformOrigin: "top center -50",
-//       stagger: 0.1 
+//       stagger: 0.1
 //     });
 //   });
 // }
 // =================================== Custom Split text Js End =====================================
-
-
 
 // **************************** Position Aware button hover js start ****************************
 class Button {
@@ -241,7 +234,7 @@ class Button {
 
     this.DOM = {
       button: this.block,
-      flair: el(".button__flair")
+      flair: el(".button__flair"),
     };
 
     this.xSet = gsap.quickSetter(this.DOM.flair, "xPercent");
@@ -249,12 +242,8 @@ class Button {
   }
 
   getXY(e) {
-    const {
-      left,
-      top,
-      width,
-      height
-    } = this.DOM.button.getBoundingClientRect();
+    const { left, top, width, height } =
+      this.DOM.button.getBoundingClientRect();
 
     const xTransformer = gsap.utils.pipe(
       gsap.utils.mapRange(0, width, 0, 100),
@@ -268,7 +257,7 @@ class Button {
 
     return {
       x: xTransformer(e.clientX - left),
-      y: yTransformer(e.clientY - top)
+      y: yTransformer(e.clientY - top),
     };
   }
 
@@ -282,7 +271,7 @@ class Button {
       gsap.to(this.DOM.flair, {
         scale: 1,
         duration: 0.9,
-        ease: "power2.out"
+        ease: "power2.out",
       });
     });
 
@@ -296,7 +285,7 @@ class Button {
         yPercent: y > 90 ? y + 20 : y < 10 ? y - 20 : y,
         scale: 0,
         duration: 0.9,
-        ease: "power2.out"
+        ease: "power2.out",
       });
     });
 
@@ -307,7 +296,7 @@ class Button {
         xPercent: x,
         yPercent: y,
         duration: 0.9,
-        ease: "power2"
+        ease: "power2",
       });
     });
   }
@@ -320,9 +309,6 @@ buttonElements.forEach((buttonElement) => {
 });
 
 // **************************** Position Aware button hover js End ****************************
-
-
-
 
 /* **************************************************************************** 
                           Custom GSAP js start 

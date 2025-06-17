@@ -88,6 +88,10 @@
     --main-s: 94%;
     --main-l: 41%;
     --main: var(--main-h) var(--main-s) var(--main-l);
+    --main-two-h: 249;
+    --main-two-s: 63%;
+    --main-two-l: 15%;
+    --main-two: var(--main-two-h) var(--main-two-s) var(--main-two-l);
   /* White Color */
     --white: 0 0% 100%;
     --black: 0 0% 0%;
@@ -131,6 +135,16 @@
     --main-700: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.1));
     --main-800: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.2));
     --main-900: hsl(var(--main-h), var(--main-s), calc(var(--main-l) - var(--main-l) * 0.3));
+    --main-two-50: hsl(var(--main-two-h), var(--main-two-s), calc(var(--main-two-l) + (100% - var(--main-two-l)) * 0.9));
+    --main-two-100: hsl(var(--main-two-h), var(--main-two-s), calc(var(--main-two-l) + (100% - var(--main-two-l)) * 0.8));
+    --main-two-200: hsl(var(--main-two-h), var(--main-two-s), calc(var(--main-two-l) + (100% - var(--main-two-l)) * 0.7));
+    --main-two-300: hsl(var(--main-two-h), var(--main-two-s), calc(var(--main-two-l) + (100% - var(--main-two-l)) * 0.6));
+    --main-two-400: hsl(var(--main-two-h), var(--main-two-s), calc(var(--main-two-l) + (100% - var(--main-two-l)) * 0.5));
+    --main-two-500: hsl(var(--main-two-h), var(--main-two-s), calc(var(--main-two-l) + (100% - var(--main-two-l)) * 0.4));
+    --main-two-600: hsl(var(--main-two-h), var(--main-two-s), var(--main-two-l));
+    --main-two-700: hsl(var(--main-two-h), var(--main-two-s), calc(var(--main-two-l) - var(--main-two-l) * 0.1));
+    --main-two-800: hsl(var(--main-two-h), var(--main-two-s), calc(var(--main-two-l) - var(--main-two-l) * 0.2));
+    --main-two-900: hsl(var(--main-two-h), var(--main-two-s), calc(var(--main-two-l) - var(--main-two-l) * 0.3));
     --neutral-50: #f9fafb;
     --neutral-100: #f3f4f6;
     --neutral-200: #e5e7eb;
@@ -886,6 +900,46 @@ input:focus, input:focus-visible {
     background-color: var(--main-900) !important;
 }
 
+.bg-main-two-50 {
+    background-color: var(--main-two-50) !important;
+}
+
+.bg-main-two-100 {
+    background-color: var(--main-two-100) !important;
+}
+
+.bg-main-two-200 {
+    background-color: var(--main-two-200) !important;
+}
+
+.bg-main-two-300 {
+    background-color: var(--main-two-300) !important;
+}
+
+.bg-main-two-400 {
+    background-color: var(--main-two-400) !important;
+}
+
+.bg-main-two-500 {
+    background-color: var(--main-two-500) !important;
+}
+
+.bg-main-two-600 {
+    background-color: var(--main-two-600) !important;
+}
+
+.bg-main-two-700 {
+    background-color: var(--main-two-700) !important;
+}
+
+.bg-main-two-800 {
+    background-color: var(--main-two-800) !important;
+}
+
+.bg-main-two-900 {
+    background-color: var(--main-two-900) !important;
+}
+
 .bg-neutral-50 {
     background-color: var(--neutral-50) !important;
 }
@@ -968,6 +1022,46 @@ input:focus, input:focus-visible {
 
 .hover-bg-main-900:hover {
     background-color: var(--main-900) !important;
+}
+
+.hover-bg-main-two-50:hover {
+    background-color: var(--main-two-50) !important;
+}
+
+.hover-bg-main-two-100:hover {
+    background-color: var(--main-two-100) !important;
+}
+
+.hover-bg-main-two-200:hover {
+    background-color: var(--main-two-200) !important;
+}
+
+.hover-bg-main-two-300:hover {
+    background-color: var(--main-two-300) !important;
+}
+
+.hover-bg-main-two-400:hover {
+    background-color: var(--main-two-400) !important;
+}
+
+.hover-bg-main-two-500:hover {
+    background-color: var(--main-two-500) !important;
+}
+
+.hover-bg-main-two-600:hover {
+    background-color: var(--main-two-600) !important;
+}
+
+.hover-bg-main-two-700:hover {
+    background-color: var(--main-two-700) !important;
+}
+
+.hover-bg-main-two-800:hover {
+    background-color: var(--main-two-800) !important;
+}
+
+.hover-bg-main-two-900:hover {
+    background-color: var(--main-two-900) !important;
 }
 
 .hover-bg-neutral-50:hover {
@@ -1075,6 +1169,46 @@ input:focus, input:focus-visible {
     border-color: var(--main-900) !important;
 }
 
+.border-main-two-50 {
+    border-color: var(--main-two-50) !important;
+}
+
+.border-main-two-100 {
+    border-color: var(--main-two-100) !important;
+}
+
+.border-main-two-200 {
+    border-color: var(--main-two-200) !important;
+}
+
+.border-main-two-300 {
+    border-color: var(--main-two-300) !important;
+}
+
+.border-main-two-400 {
+    border-color: var(--main-two-400) !important;
+}
+
+.border-main-two-500 {
+    border-color: var(--main-two-500) !important;
+}
+
+.border-main-two-600 {
+    border-color: var(--main-two-600) !important;
+}
+
+.border-main-two-700 {
+    border-color: var(--main-two-700) !important;
+}
+
+.border-main-two-800 {
+    border-color: var(--main-two-800) !important;
+}
+
+.border-main-two-900 {
+    border-color: var(--main-two-900) !important;
+}
+
 .border-neutral-50 {
     border-color: var(--neutral-50) !important;
 }
@@ -1159,6 +1293,46 @@ input:focus, input:focus-visible {
     border-color: var(--main-900) !important;
 }
 
+.hover-border-main-two-50:hover {
+    border-color: var(--main-two-50) !important;
+}
+
+.hover-border-main-two-100:hover {
+    border-color: var(--main-two-100) !important;
+}
+
+.hover-border-main-two-200:hover {
+    border-color: var(--main-two-200) !important;
+}
+
+.hover-border-main-two-300:hover {
+    border-color: var(--main-two-300) !important;
+}
+
+.hover-border-main-two-400:hover {
+    border-color: var(--main-two-400) !important;
+}
+
+.hover-border-main-two-500:hover {
+    border-color: var(--main-two-500) !important;
+}
+
+.hover-border-main-two-600:hover {
+    border-color: var(--main-two-600) !important;
+}
+
+.hover-border-main-two-700:hover {
+    border-color: var(--main-two-700) !important;
+}
+
+.hover-border-main-two-800:hover {
+    border-color: var(--main-two-800) !important;
+}
+
+.hover-border-main-two-900:hover {
+    border-color: var(--main-two-900) !important;
+}
+
 .hover-border-neutral-50:hover {
     border-color: var(--neutral-50) !important;
 }
@@ -1241,6 +1415,46 @@ input:focus, input:focus-visible {
 
 .focus-border-main-900:focus {
     border-color: var(--main-900) !important;
+}
+
+.focus-border-main-two-50:focus {
+    border-color: var(--main-two-50) !important;
+}
+
+.focus-border-main-two-100:focus {
+    border-color: var(--main-two-100) !important;
+}
+
+.focus-border-main-two-200:focus {
+    border-color: var(--main-two-200) !important;
+}
+
+.focus-border-main-two-300:focus {
+    border-color: var(--main-two-300) !important;
+}
+
+.focus-border-main-two-400:focus {
+    border-color: var(--main-two-400) !important;
+}
+
+.focus-border-main-two-500:focus {
+    border-color: var(--main-two-500) !important;
+}
+
+.focus-border-main-two-600:focus {
+    border-color: var(--main-two-600) !important;
+}
+
+.focus-border-main-two-700:focus {
+    border-color: var(--main-two-700) !important;
+}
+
+.focus-border-main-two-800:focus {
+    border-color: var(--main-two-800) !important;
+}
+
+.focus-border-main-two-900:focus {
+    border-color: var(--main-two-900) !important;
 }
 
 .focus-border-neutral-50:focus {
@@ -1334,6 +1548,46 @@ input:focus, input:focus-visible {
 
 .text-main-900 {
     color: var(--main-900);
+}
+
+.text-main-two-50 {
+    color: var(--main-two-50);
+}
+
+.text-main-two-100 {
+    color: var(--main-two-100);
+}
+
+.text-main-two-200 {
+    color: var(--main-two-200);
+}
+
+.text-main-two-300 {
+    color: var(--main-two-300);
+}
+
+.text-main-two-400 {
+    color: var(--main-two-400);
+}
+
+.text-main-two-500 {
+    color: var(--main-two-500);
+}
+
+.text-main-two-600 {
+    color: var(--main-two-600);
+}
+
+.text-main-two-700 {
+    color: var(--main-two-700);
+}
+
+.text-main-two-800 {
+    color: var(--main-two-800);
+}
+
+.text-main-two-900 {
+    color: var(--main-two-900);
 }
 
 .text-neutral-50 {
@@ -1436,6 +1690,46 @@ input:focus, input:focus-visible {
 
 .hover-text-main-900:hover {
     color: var(--main-900) !important;
+}
+
+.hover-text-main-two-50:hover {
+    color: var(--main-two-50) !important;
+}
+
+.hover-text-main-two-100:hover {
+    color: var(--main-two-100) !important;
+}
+
+.hover-text-main-two-200:hover {
+    color: var(--main-two-200) !important;
+}
+
+.hover-text-main-two-300:hover {
+    color: var(--main-two-300) !important;
+}
+
+.hover-text-main-two-400:hover {
+    color: var(--main-two-400) !important;
+}
+
+.hover-text-main-two-500:hover {
+    color: var(--main-two-500) !important;
+}
+
+.hover-text-main-two-600:hover {
+    color: var(--main-two-600) !important;
+}
+
+.hover-text-main-two-700:hover {
+    color: var(--main-two-700) !important;
+}
+
+.hover-text-main-two-800:hover {
+    color: var(--main-two-800) !important;
+}
+
+.hover-text-main-two-900:hover {
+    color: var(--main-two-900) !important;
 }
 
 .hover-text-neutral-50:hover {
@@ -4559,6 +4853,57 @@ input:focus, input:focus-visible {
     }
 }
 /* ================================= preload Css End ===========================  */
+/* ========================== Settings panel css start =========================== */
+.settings-button .close-icon {
+    display: none;
+}
+
+.settings-button.active .setting-icon {
+    display: none;
+}
+
+.settings-button.active .close-icon {
+    display: block;
+}
+
+.settings-panel {
+    inset-inline-end: -280px;
+    transition: 0.3s;
+}
+
+.settings-panel.active {
+    inset-inline-end: 0px !important;
+}
+
+.settings-panel__content {
+    width: 280px;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.settings-panel__button.active {
+    background-color: var(--main-600) !important;
+}
+
+.remove-animate-cursor .cursor,
+.remove-animate-cursor .dot {
+    display: none;
+}
+
+.animation-rotate {
+    animation: animationRotate 2s linear infinite;
+}
+
+@keyframes animationRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+/* ========================== Settings panel css end =========================== */
 /* ============= Header Start Here ======================= */
 @media screen and (max-width: 991px) {
     .header {
@@ -4723,8 +5068,8 @@ input:focus, input:focus-visible {
 /* ===================== Scroll to Top Start ================================= */
 .progress-wrap {
     position: fixed;
-    inset-inline-end: 36px;
-    inset-block-end: 36px;
+    inset-inline-end: 16px;
+    inset-block-end: 16px;
     height: 46px;
     width: 46px;
     cursor: pointer;

@@ -55,7 +55,7 @@
   // ===================== Scroll Back to Top Js End ======================
 
   
-// ========================== add active class to navbar menu current page Js Start =====================
+  // ========================== add active class to navbar menu current page Js Start =====================
   function dynamicActiveMenuClass(selector) {
     let FileName = window.location.pathname.split("/").reverse()[0];
 
@@ -87,8 +87,43 @@
   if ($('ul').length) {
     dynamicActiveMenuClass($('ul'));
   }
-// ========================== add active class to navbar menu current page Js End =====================
+  // ========================== add active class to navbar menu current page Js End =====================
 
+  // ========================== Settings Panel Js Start =====================
+  $(".settings-button").on("click", function () {
+    $(".settings-panel").toggleClass("active");
+    $(this).toggleClass("active");
+  });
+
+  $(document).on(
+    "click",
+    ".settings-panel__buttons .settings-panel__button",
+    function () {
+      $(this).siblings().removeClass("active");
+      $(this).addClass("active");
+    }
+  );
+
+  // Cursor start
+  $(".cursor-animate").on("click", function () {
+    $("body").removeClass("remove-animate-cursor");
+  });
+
+  $(".cursor-default").on("click", function () {
+    $("body").addClass("remove-animate-cursor");
+  });
+  // Cursor end
+
+  // Direction start
+  $(".direction-ltr").on("click", function () {
+    $("html").attr("dir", "ltr");
+  });
+
+  $(".direction-rtl").on("click", function () {
+    $("html").attr("dir", "rtl");
+  });
+  // Direction end
+  // ========================== Settings Panel Js End =====================
 
   // ********************* Toast Notification Js start *********************
   function toastMessage(messageType, messageTitle, messageText, messageIcon) {

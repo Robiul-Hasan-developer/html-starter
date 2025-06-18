@@ -98,6 +98,54 @@ cursorBigs.forEach((cursorBig) => {
 // =================================== Custom Cursor Js End =====================================
 
 // **************************** Mobile Menu js Start ****************************
+// var mmm = gsap.matchMedia();
+// var mtl = gsap.timeline({ paused: true });
+
+// const toggleMobileMenu = document.querySelector(".toggle-mobileMenu");
+// const closeButton = document.querySelector(".close-button");
+// const mobileSideOverlay = document.querySelector(".side-overlay");
+
+// mmm.add("(max-width: 991px)", () => {
+//   mtl.to(".side-overlay", {
+//     opacity: 1,
+//     visibility: "visible",
+//     duration: 0.15,
+//   });
+
+//   mtl.to(".mobile-menu", {
+//     x: 0,
+//     duration: 0.15,
+//   });
+
+//   mtl.from(".nav-menu__item", {
+//     opacity: 0,
+//     duration: 0.2,
+//     y: -60,
+//     stagger: 0.08,
+//   });
+
+//   mtl.from(".close-button", {
+//     opacity: 0,
+//     scale: 0,
+//     duration: 0.15,
+//   });
+
+//   toggleMobileMenu.addEventListener("click", function () {
+//     mtl.play();
+//     document.body.style.overflow = "hidden";
+//   });
+
+//   closeButton.addEventListener("click", function () {
+//     mtl.reverse();
+//     document.body.style.overflow = "";
+//   });
+
+//   mobileSideOverlay.addEventListener("click", function () {
+//     mtl.reverse();
+//     document.body.style.overflow = "";
+//   });
+// });
+
 var mmm = gsap.matchMedia();
 var mtl = gsap.timeline({ paused: true });
 
@@ -114,7 +162,8 @@ mmm.add("(max-width: 991px)", () => {
 
   mtl.to(".mobile-menu", {
     x: 0,
-    duration: 0.15,
+    delay: 0.2,
+    duration: 0.2,
   });
 
   mtl.from(".nav-menu__item", {
@@ -122,12 +171,6 @@ mmm.add("(max-width: 991px)", () => {
     duration: 0.2,
     y: -60,
     stagger: 0.08,
-  });
-
-  mtl.from(".close-button", {
-    opacity: 0,
-    scale: 0,
-    duration: 0.15,
   });
 
   toggleMobileMenu.addEventListener("click", function () {

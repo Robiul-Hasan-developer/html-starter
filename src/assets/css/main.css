@@ -4950,6 +4950,10 @@ input:focus, input:focus-visible {
     inset-inline-end: 0px !important;
 }
 
+.settings-panel.active .settings-panel__content {
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
 .settings-panel__content {
     pointer-events: all;
     width: 280px;
@@ -5109,6 +5113,14 @@ input:focus, input:focus-visible {
     max-height: 540px;
     overflow-y: auto;
     overflow-x: hidden;
+}
+
+@media (max-width: 991px) {
+    .mega-menu {
+        margin-block: 16px !important;
+        margin-inline-start: 0 !important;
+        padding-inline-end: 4px !important;
+    }
 }
 
 .mega-menu-item__overlay, .mega-menu-item__buttons {

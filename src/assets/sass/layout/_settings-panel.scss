@@ -20,6 +20,11 @@
   transition: 0.3s;
   &.active {
     inset-inline-end: 0px !important;
+    .settings-panel {
+      &__content {
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+      }
+    }
   }
   &__content {
     pointer-events: all;

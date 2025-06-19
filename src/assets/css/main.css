@@ -2090,6 +2090,10 @@ input:focus, input:focus-visible {
     height: 92px;
 }
 
+.tw-h-320-px {
+    height: 320px;
+}
+
 .tw-min-h-184-px {
     min-height: 184px;
 }
@@ -5088,6 +5092,40 @@ input:focus, input:focus-visible {
 /* Submenu End */
 /* Header Menu and Submenu Css End */
 /* ================================= Header Css End =========================== */
+/* Mega menu css start */
+.mega-menu {
+    position: absolute;
+    inset-block-start: 100%;
+    background-color: #fff;
+    width: 100%;
+    inset-inline-start: 0;
+    z-index: 99;
+    box-shadow: 0px 20px 30px rgba(1, 15, 28, 0.1);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.mega-menu-item__overlay, .mega-menu-item__buttons {
+    transition: all 0.6s;
+}
+
+.mega-menu-item__overlay {
+    background-color: #0000008c;
+}
+
+.mega-menu-item__buttons {
+    margin-top: -60px;
+    transform: scale(0.8);
+}
+
+.mega-menu-item:hover .mega-menu-item__buttons {
+    transition-delay: 0.1s;
+    margin-top: 0px;
+    transform: scale(1);
+}
+
+/* Mega menu css end */
 /* Mobile Menu Sidebar Start */
 .mobile-menu.active {
     transform: translateX(0%);

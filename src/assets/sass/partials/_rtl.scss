@@ -62,6 +62,9 @@
   .tw--translate-x-full {
     transform: translateX(100%);
   }
+  .image-animation:after {
+    transform: translate(50%, -50%) rotate(-45deg);
+  }
 
   .ph-bold.ph-caret-right:before {
     content: "\E138";

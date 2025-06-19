@@ -2095,6 +2095,26 @@ input:focus, input:focus-visible {
 }
 
 /* Height Css Class End */
+/* Hover animation white css start */
+.hover-animation-white:after {
+    content: "";
+    position: absolute;
+    width: 250%;
+    height: 0%;
+    inset-inline-start: 50%;
+    inset-block-start: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 1;
+}
+
+.hover-animation-white:hover:after {
+    height: 250%;
+    transition: all 0.6s linear;
+    background-color: transparent;
+}
+
+/* Hover animation white css end */
 /* Gap Css start */
 .tw-gap-05 {
     gap: var(--size-05);
@@ -4344,6 +4364,12 @@ input:focus, input:focus-visible {
 }
 
 /*================================== Translate Css End  ==================================*/
+/* Transform Css Start */
+.origin-left {
+    transform-origin: left;
+}
+
+/* Transform Css End */
 /* Text Decoration Start */
 .hover-underline:hover {
     text-decoration: underline;
@@ -5262,6 +5288,10 @@ input:focus, input:focus-visible {
 
 [dir=rtl] .tw--translate-x-full {
     transform: translateX(100%);
+}
+
+[dir=rtl] .image-animation:after {
+    transform: translate(50%, -50%) rotate(-45deg);
 }
 
 [dir=rtl] .ph-bold.ph-caret-right:before {

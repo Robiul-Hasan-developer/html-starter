@@ -18,7 +18,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText);
 // });
 // **************************** Nav Menu js End ****************************
 
-// =================================== Custom Cursor Js Start =====================================
+// **************************** Custom Cursor Js Start ****************************
 var body = document.body;
 var cursor = document.querySelector(".cursor");
 var dot = document.querySelector(".dot");
@@ -95,57 +95,9 @@ cursorBigs.forEach((cursorBig) => {
     });
   });
 });
-// =================================== Custom Cursor Js End =====================================
+// **************************** Custom Cursor Js End ****************************
 
 // **************************** Mobile Menu js Start ****************************
-// var mmm = gsap.matchMedia();
-// var mtl = gsap.timeline({ paused: true });
-
-// const toggleMobileMenu = document.querySelector(".toggle-mobileMenu");
-// const closeButton = document.querySelector(".close-button");
-// const mobileSideOverlay = document.querySelector(".side-overlay");
-
-// mmm.add("(max-width: 991px)", () => {
-//   mtl.to(".side-overlay", {
-//     opacity: 1,
-//     visibility: "visible",
-//     duration: 0.15,
-//   });
-
-//   mtl.to(".mobile-menu", {
-//     x: 0,
-//     duration: 0.15,
-//   });
-
-//   mtl.from(".nav-menu__item", {
-//     opacity: 0,
-//     duration: 0.2,
-//     y: -60,
-//     stagger: 0.08,
-//   });
-
-//   mtl.from(".close-button", {
-//     opacity: 0,
-//     scale: 0,
-//     duration: 0.15,
-//   });
-
-//   toggleMobileMenu.addEventListener("click", function () {
-//     mtl.play();
-//     document.body.style.overflow = "hidden";
-//   });
-
-//   closeButton.addEventListener("click", function () {
-//     mtl.reverse();
-//     document.body.style.overflow = "";
-//   });
-
-//   mobileSideOverlay.addEventListener("click", function () {
-//     mtl.reverse();
-//     document.body.style.overflow = "";
-//   });
-// });
-
 var mmm = gsap.matchMedia();
 var mtl = gsap.timeline({ paused: true });
 
@@ -190,7 +142,7 @@ mmm.add("(max-width: 991px)", () => {
 });
 // **************************** Mobile Menu js End ****************************
 
-// =================================== Custom Split text Js Start =====================================
+// **************************** Custom Split text Js Start ****************************
 if ($(".splitTextStyleOne").length > 0) {
   let character = gsap.utils.toArray(".splitTextStyleOne");
   character.forEach((character) => {
@@ -218,40 +170,7 @@ if ($(".splitTextStyleOne").length > 0) {
     });
   });
 }
-
-// if ($('.splitTextStyleOne').length > 0) {
-//   let splitTextLines = gsap.utils.toArray(".splitTextStyleOne");
-
-//   splitTextLines.forEach(splitTextLine => {
-//     const tl = gsap.timeline({
-//       scrollTrigger: {
-//         trigger: splitTextLine,
-//         start: 'top 99%',
-//         duration: .6,
-//         end: 'bottom 90%',
-//         scrub: false,
-//         markers: false,
-//         toggleActions: 'restart none none none'
-//       }
-//     });
-
-//     const itemSplitted = new SplitText(splitTextLine, { type: "lines" });
-
-//     gsap.set(splitTextLine, { perspective: 500 });
-//     itemSplitted.split({ type: "lines" })
-
-//     tl.from(itemSplitted.lines, {
-//       duration: .6,
-//       delay: 0.3,
-//       opacity: 0,
-//       rotationX: -80,
-//       force3D: true,
-//       transformOrigin: "top center -50",
-//       stagger: 0.1
-//     });
-//   });
-// }
-// =================================== Custom Split text Js End =====================================
+// **************************** Custom Split text Js End ****************************
 
 // **************************** Position Aware button hover js start ****************************
 class Button {
@@ -339,8 +258,43 @@ const buttonElements = document.querySelectorAll('[data-block="button"]');
 buttonElements.forEach((buttonElement) => {
   new Button(buttonElement);
 });
-
 // **************************** Position Aware button hover js End ****************************
+
+// **************************** Image Reveal js Start ****************************
+if ($(".split-reveal").length) {
+  gsap.registerPlugin(ScrollTrigger);
+  let revealContainers = document.querySelectorAll(".split-reveal");
+
+  revealContainers.forEach((container) => {
+    let image = container.querySelector("img");
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: container,
+        toggleActions: "play none none none",
+      },
+    });
+
+    tl.set(container, {
+      autoAlpha: 1,
+    });
+
+    tl.from(container, {
+      duration: 1,
+      xPercent: -100,
+      ease: Power2.out,
+    });
+
+    tl.from(image, {
+      duration: 1,
+      xPercent: 100,
+      scale: 1,
+      delay: -1,
+      ease: Power2.out,
+    });
+  });
+}
+// **************************** Image Reveal js End ****************************
 
 /* **************************************************************************** 
                           Custom GSAP js start 

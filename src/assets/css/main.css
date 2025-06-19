@@ -2100,6 +2100,11 @@ input:focus, input:focus-visible {
 
 /* Height Css Class End */
 /* Hover animation white css start */
+.hover-animation-white {
+    position: relative;
+    overflow: hidden;
+}
+
 .hover-animation-white:after {
     content: "";
     position: absolute;

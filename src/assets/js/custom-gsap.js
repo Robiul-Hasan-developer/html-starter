@@ -260,13 +260,12 @@ buttonElements.forEach((buttonElement) => {
 });
 // **************************** Position Aware button hover js End ****************************
 
-// **************************** Image Reveal js Start ****************************
+// **************************** split Reveal js Start ****************************
 if ($(".split-reveal").length) {
-  gsap.registerPlugin(ScrollTrigger);
   let revealContainers = document.querySelectorAll(".split-reveal");
 
   revealContainers.forEach((container) => {
-    let image = container.querySelector("img");
+    let image = container.querySelector(".split-reveal-element");
 
     let tl = gsap.timeline({
       scrollTrigger: {
@@ -294,7 +293,7 @@ if ($(".split-reveal").length) {
     });
   });
 }
-// **************************** Image Reveal js End ****************************
+// **************************** split Reveal js End ****************************
 
 /* **************************************************************************** 
                           Custom GSAP js start 

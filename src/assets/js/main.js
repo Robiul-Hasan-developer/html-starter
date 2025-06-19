@@ -323,7 +323,7 @@
 
   // ========================= Preloader Js Start =====================
   $(window).on("load", function () {
-    $(".preloader").fadeOut();
+    $(".loader-mask").fadeOut();
   });
   // ========================= Preloader Js End=====================
 

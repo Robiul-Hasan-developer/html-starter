@@ -339,7 +339,7 @@ if ($(".split-reveal").length) {
   let revealContainers = document.querySelectorAll(".split-reveal");
 
   revealContainers.forEach((container) => {
-    let image = container.querySelector(".split-reveal-element");
+    let splitElement = container.querySelector(".split-reveal-element");
 
     let tl = gsap.timeline({
       scrollTrigger: {
@@ -358,7 +358,7 @@ if ($(".split-reveal").length) {
       ease: Power2.out,
     });
 
-    tl.from(image, {
+    tl.from(splitElement, {
       duration: 1,
       xPercent: 100,
       scale: 1,

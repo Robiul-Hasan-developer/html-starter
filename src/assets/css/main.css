@@ -5041,7 +5041,8 @@ input:focus, input:focus-visible {
     }
 }
 
-.has-submenu.active > a, .has-submenu.active > a::before {
+.has-submenu.active > a,
+.has-submenu.active > a::before {
     color: var(--main-600);
 }
 
@@ -5052,7 +5053,7 @@ input:focus, input:focus-visible {
 .has-submenu:hover .nav-submenu {
     visibility: visible;
     opacity: 1;
-    margin-block-start: 0;
+    transform: scaleY(1);
 }
 
 @media (min-width: 992px) {
@@ -5084,6 +5085,9 @@ input:focus, input:focus-visible {
     min-width: 190px;
     visibility: hidden;
     opacity: 0;
+    transform: scaleY(0);
+    transition: 0.3s ease;
+    transform-origin: top center;
 }
 
 @media (min-width: 992px) {

@@ -87,7 +87,7 @@
         }
         .button__flair {
             &::before {
-                background-color: red;
+                background-color: var(--main-two-600);
             }
         }
     }

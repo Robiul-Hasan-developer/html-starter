@@ -317,7 +317,7 @@
 }
 
 .hover-style-one .button__flair::before {
-    background-color: red;
+    background-color: var(--main-two-600);
 }
 
 .hover-style-two:hover, .hover-style-two:active {
@@ -5086,7 +5086,7 @@ input:focus, input:focus-visible {
     visibility: hidden;
     opacity: 0;
     transform: scaleY(0);
-    transition: 0.3s ease;
+    transition: 0.4s ease;
     transform-origin: top center;
 }
 

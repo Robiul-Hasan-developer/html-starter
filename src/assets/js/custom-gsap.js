@@ -29,7 +29,7 @@ body.addEventListener("mousemove", function (event) {
   gsap.to(cursor, {
     x: event.x,
     y: event.y,
-    duration: 2,
+    duration: 1.5,
     delay: 0.1,
     visibility: "visible",
     ease: "expo.out",
@@ -40,7 +40,7 @@ body.addEventListener("mousemove", function (event) {
   gsap.to(dot, {
     x: event.x,
     y: event.y,
-    duration: 1.5,
+    duration: 1,
     visibility: "visible",
     ease: "expo.out",
   });

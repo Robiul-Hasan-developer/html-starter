@@ -88,13 +88,13 @@
     --heading-six: clamp(1rem, 0.769rem + 0.6813vw, 1.25rem);
   /* Font Size End */
   /* template main color */
-    --main-h: 209;
-    --main-s: 94%;
-    --main-l: 41%;
+    --main-h: 20;
+    --main-s: 100%;
+    --main-l: 47%;
     --main: var(--main-h) var(--main-s) var(--main-l);
-    --main-two-h: 249;
-    --main-two-s: 63%;
-    --main-two-l: 15%;
+    --main-two-h: 0;
+    --main-two-s: 0%;
+    --main-two-l: 5%;
     --main-two: var(--main-two-h) var(--main-two-s) var(--main-two-l);
   /* White Color */
     --white: 0 0% 100%;
@@ -170,7 +170,6 @@
 }
 
 /* ========================= Variable Css End ======================== */
-/* Media Breakpoint for Each Device End */
 /* =========================== Accordion Css start ============================= */
 .common-accordion .accordion-item:not(:last-child) {
     margin-block-end: 20px;
@@ -217,7 +216,7 @@
     text-align: center;
 }
 
-@media screen and (max-width: 575px) {
+@media (max-width: 991px) {
     .common-accordion .accordion-button[aria-expanded=true]::after, .common-accordion .accordion-button[aria-expanded=false]::after {
         inset-inline-end: 20px;
     }
@@ -4963,6 +4962,7 @@ input:focus, input:focus-visible {
     width: 280px;
     max-height: 100vh;
     overflow-y: auto;
+    transition: inherit;
 }
 
 .settings-panel__button.active {
@@ -5075,7 +5075,7 @@ input:focus, input:focus-visible {
     transform: translateY(-50%);
     font-family: "Phosphor";
     font-weight: 900;
-    color: hsl(var(--heading-color)/0.4);
+    color: inherit;
     transition: 0.2s linear;
 }
 

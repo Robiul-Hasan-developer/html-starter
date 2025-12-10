@@ -1,6 +1,6 @@
 /* ============= Header Start Here ======================= */
 .header {
-  @include md-screen {
+  @media screen and (max-width: 991px) {
     padding: 10px 0;
   }
 
@@ -15,7 +15,7 @@
     animation: slideDown 0.35s ease-out;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
 
-    @include md-screen {
+    @media screen and (max-width: 991px) {
       inset-block-start: -1px;
     }
   }
